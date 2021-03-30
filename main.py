@@ -1,11 +1,11 @@
 import requests
 from datetime import datetime
-import pywhatkit
+import pywhatkit     #This is a module that can be used to send automatic WhatsApp messages
 
 
 def get_weather_info():
-    my_api = "d1cfb735f81830e515465a6c402590c6"
-    location = "Trabzon"
+    my_api = "{Replace your api here}"  
+    location = "you{your city name}"  
     complete_api_link = "http://api.openweathermap.org/data/2.5/weather?q="+location+"&appid="+my_api
 
     api_link = requests.get(complete_api_link)
@@ -20,7 +20,7 @@ def get_weather_info():
         wind_spd = api_data['wind']['speed']
         date_time = datetime.now().strftime("%d %b %Y | %I:%M:%S %p")
 
-
+    `   #The following lines were written for testing purpose
         #print(f"Weather stats for {location.upper()} || {date_time}")
         #print("Current temperature is: {}°C".format(city_temp))
         #print("current weather desc :", weather_desc)
