@@ -37,4 +37,4 @@ Have a nice day!"""
 
 
 if __name__ == '__main__':
-    pywhatkit.sendwhatmsg('+905531714783', get_weather_info(), 22, 44)
+    pywhatkit.sendwhatmsg('receivers_whatsApp_number', get_weather_info(), {hour}, {minute})
